@@ -20,6 +20,7 @@ model User {
   role     Role    @relation(fields: [roleId], references: [id])
   roleId   Int
   profile  Profile[]
+  prediction Prediction[]
   createdAt DateTime @default(now())
   updatedAt DateTime @default(now())
 }
@@ -61,13 +62,54 @@ model Faq {
 
 model Prediction {
   id   Int     @id @default(autoincrement())
-  accuraty String?
+  users User    @relation(fields: [userId], references: [id])
+  userId Int
+  breakfast Breakfast[]
+  lunch Lunch[]
+  dinner Dinner[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+}
+
+model Breakfast {
+  id   Int     @id @default(autoincrement())
   food_name String?
   calcium String?
   carbohydrate String?
   fat String?
   protein String?
   vitamin String?
+  prediction Prediction @relation(fields: [predictionId], references: [id])
+  predictionId Int
   createdAt DateTime @default(now())
   updatedAt DateTime @default(now())
 }
+
+model Lunch {
+  id   Int     @id @default(autoincrement())
+  food_name String?
+  calcium String?
+  carbohydrate String?
+  fat String?
+  protein String?
+  vitamin String?
+  prediction Prediction @relation(fields: [predictionId], references: [id])
+  predictionId Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+}
+
+model Dinner {
+  id   Int     @id @default(autoincrement())
+  food_name String?
+  calcium String?
+  carbohydrate String?
+  fat String?
+  protein String?
+  vitamin String?
+  prediction Prediction @relation(fields: [predictionId], references: [id])
+  predictionId Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+}
+
