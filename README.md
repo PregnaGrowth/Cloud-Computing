@@ -1,5 +1,9 @@
 ## Documentasi Cloud Computing
+### Insfrastrukture Diagram Cloud and Database
+![Pregna](https://github.com/PregnaGrowth/Cloud-Computing/blob/main/uploads/pregna.png?raw=True)
 
+### databases
+![Pregna](https://github.com/PregnaGrowth/Cloud-Computing/blob/main/uploads/drawSQL-pregnagrowth-export-2023-12-21.png?raw=True)
 ## Instalasi
 
 1. Ensure you have installed at least version v.20.10 [Node.js](https://nodejs.org/).
